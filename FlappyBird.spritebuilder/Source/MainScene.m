@@ -55,7 +55,7 @@
     if (!_gameOver) {
         [character.physicsBody applyAngularImpulse:10000.f];
         _sinceTouch = 0.f;
-        
+        [character flap];
         @try
         {
             [super touchBegan:touch withEvent:event];

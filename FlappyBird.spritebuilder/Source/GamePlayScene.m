@@ -11,6 +11,7 @@
     character = (Character*)[CCBReader load:@"Character"];
     [physicsNode addChild:character];
     [self addObstacle];
+    [self showScore];
 }
 
 -(void)update:(CCTime)delta
@@ -29,6 +30,8 @@
         // Then reset the timer.
         timeSinceObstacle = 0.0f;
     }
+    
+    [self showScore];
 }
 
 // put new methods here
